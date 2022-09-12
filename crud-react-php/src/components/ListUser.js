@@ -13,11 +13,17 @@ export default function ListUser() {
         axios.get('http://localhost:80/api/users/').then(function(response) {
             
             setUsers(response.data);
-            
-        });console.log(users);
+            console.log(users["name"]);
+        });
     }
-
+    
    
+    // const deleteUser = (id) => {
+    //     axios.delete(`http://localhost:80/api/user/${id}/delete`).then(function(response){
+    //         console.log(response.data);
+    //         getUsers();
+    //     });
+    // }
     return (
         <div>
             <h1>List Users</h1>
@@ -32,8 +38,17 @@ export default function ListUser() {
                     </tr>
                 </thead>
                 <tbody>
-                  
-                
+                        {/* <tr >
+                            <td>{user.id}</td>
+                            <td>{user.name}</td>
+                            <td>{user.email}</td>
+                            <td>{user.mobile}</td>
+                            <td>
+                                <Link to={`user/${user.id}/edit`} style={{marginRight: "10px"}}>Edit</Link>
+                                <button onClick={() => deleteUser(user.id)}>Delete</button>
+                            </td>
+                        </tr> */}
+                    
                 </tbody>
             </table>
         </div>
