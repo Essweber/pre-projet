@@ -10,7 +10,7 @@ export default function ListUser() {
     }, []);
 
     function getUsers() {
-        axios.get('http://localhost:80/api/users/').then(function(response) {
+        axios.get('http://localhost:80/api/user').then(function(response) {
             console.log(response.data);
             setUsers(response.data);
         });

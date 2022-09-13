@@ -29,14 +29,11 @@
 
       $post_item = array(
         'id' => $id,
-        'user_fname' => $user_fname,
-        'user_lname' => $user_lname,
-        'user_email' => $user_email,
-        'user_password' => $user_password,
-        'user_type_id' => $user_type_id,
-        'user_tel' => $user_tel,
-        'user_created_at' => $user_created_at,
-        'user_updated_at' => $user_updated_at
+        'title' => $title,
+        'body' => html_entity_decode($body),
+        'author' => $author,
+        'category_id' => $category_id,
+        'category_name' => $category_name
       );
 
       // Push to "data"
